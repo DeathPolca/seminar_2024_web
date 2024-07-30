@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<!-- <span class="logo"><img src="images/logo.svg" alt="" /></span> -->
 						<h1>2024 seminar LIA</h1>
 						<p>Experiments on Latent Image Animator<br />
 						built by Zuo Zhirui, Xiang Hui and Xiong Ziwen for 2024 Seminar</a>.</p>
@@ -49,7 +49,7 @@
 										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.  
 										build neng tong bu m?
 										</p>
-										<!-- <ul class="actions">
+										<ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>
 										</ul>
 									</div>
@@ -87,7 +87,7 @@
 							<section id="second" class="main special">
 								<header class="major">
 									<h2>Experiments</h2>
-									<p>Due to the lengthy pretraining process, we finetuned the official open-source model and achieved good results. Based on this, we conducted three attempts at the finetuning process.<br />
+									<p>Due to the lengthy pretraining , we finetuned the open-source model and achieved good results. <br>Based on this, we conducted three attempts at the finetuning process.<br />
 									</p>
 								</header>
 
@@ -101,7 +101,8 @@
 
 								<h2>Finetune with LoRA</h2>
 
-								<p>Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
+								<p>Low Rank Adaptation (LoRA) is used to address the challenges faced in finetuning large language models. For large models with billions of parameters, finetuning for specific domains is costly. LoRA retains the weights of pretrained models and adds trainable layers within each model block. This leads to a significant reduction in the number of parameters that need to be finetuned. Generally speaking, LoRA is used in transformer architectures. However, LIA is composed of convolutional neural networks, so we use ConvLoRA from the article <i> CnvLoRA and AdaBN Based Domain Adaptation via Self Training </i> for finetuning.</p>
+								<img src="images/convlora.png" width="600" height="300">
 								<!-- <footer class="major">
 									<ul class="actions special">
 										<li><a href="generic.html" class="button">Learn More</a></li>
@@ -155,36 +156,6 @@
 							</section>
 
 					</div>
-
-				<!-- Footer -->
-					<!-- <footer id="footer">
-						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p> -->
-							<!-- <ul class="actions">
-								<li><a href="generic.html" class="button">Learn More</a></li>
-							</ul> -->
-						<!-- </section>
-						<section>
-							<h2>Etiam feugiat</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
-							</dl> -->
-							<!-- <ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-							</ul> -->
-						<!-- </section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer> -->
 
 			</div>
 
