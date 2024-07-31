@@ -14,7 +14,7 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Wrapper -->
+		<!-- Wrapper -->·
 			<div id="wrapper">
 
 				<!-- Header -->
@@ -144,7 +144,42 @@
 									  </tr>
 									</tbody>
 								  </table>
+								
 
+								  <h2>Finetune with features loss</h2>
+								  <div>We want the decoder to be able to decouple the image features from the motion information, so we add similarity constraints to the features, specifically, we add l1 loss to the feature layer.</div>
+								  
+								  <img src="images/feature_loss.jpg" alt="feature loss" width="1000" height="400">
+								  <table>
+									  <thead>
+										<tr>
+										  <th>Model</th>
+										  <th>Recon loss</th>
+										  <th>Lpips loss</th>
+										</tr>
+									  </thead>
+									  <tbody>
+										<tr>
+										  <td>taichi_40000</td>
+										  <td>0.017870907</td>
+										  <td>0.047854178</td>
+										</tr>
+										<tr>
+										  <td>taichi_80000</td>
+										  <td>0.017395224</td>
+										  <td>0.047284912</td>
+										</tr>
+										<tr>
+										  <td>taichi_120000</td>
+										  <td>0.017116006</td>
+										  <td>0.047801152</td>
+										</tr>
+									  </tbody>
+									</table>
+									<div style="text-align: center;">feature层可视化</div>
+									<div class="center-text">
+									<img src="images/view.jpg", alt="view", width="1000", height="400">
+									</div>
 								<h2>Finetune with adapter</h2>
 								<table>
 									<thead>
