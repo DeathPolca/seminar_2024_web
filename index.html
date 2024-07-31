@@ -93,11 +93,13 @@
 
 								<h2>Finetune with different loss</h2>
 
-								<p>xxx</p>
+								<p>In the original work, the reconstruction loss used  L1 loss. In the fine-tuning experiments, we utilized pre-trained taichi model and added the SSIM loss to the reconstruction loss, specifically, we designed two reconstruction loss functions. The two reconstruction loss functions are shown in the figure below</p>
+								<img src="images/loss.png" width="440" height="110">
 
 								<h2>Finetune with adapter</h2>
 
-								<p>xxx</p>
+								<p>In the fine-tuning task, the optimization of a specific task can be carried out by introducing an adapter module. The adapter module is a lightweight set of parameters that are added to the middle layer of the model to protect the parameters of the original pre-trained model. The goal of this approach is to adapt the parameters of the adapter module to the new task without changing the overall model structure.In the experiment, we introduced the adapter into the model by way of residuals.</p>
+								<img src="images/adapter.png" width="600" height="300">
 
 								<h2>Finetune with LoRA</h2>
 
@@ -116,12 +118,61 @@
 									<p>Here are the results of the above three attempts.</p>
 								</header>
 								<h2>Finetune with different loss</h2>
-
-								<p>xxx</p>
+								<table>
+									<thead>
+									  <tr>
+										<th>Model</th>
+										<th>Recon loss</th>
+										<th>Lpips loss</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<td>taichi_40000</td>
+										<td>0.017870907</td>
+										<td>0.047854178</td>
+									  </tr>
+									  <tr>
+										<td>taichi_80000</td>
+										<td>0.017218325</td>
+										<td>0.04689284</td>
+									  </tr>
+									  <tr>
+										<td>taichi_120000</td>
+										<td>0.017635012</td>
+										<td>0.04753318</td>
+									  </tr>
+									</tbody>
+								  </table>
 
 								<h2>Finetune with adapter</h2>
-
-								<p>xxx</p>
+								<table>
+									<thead>
+									  <tr>
+										<th>Model</th>
+										<th>Recon loss</th>
+										<th>Lpips loss</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<td>Adapter_40000</td>
+										<td>0.021015551</td>
+										<td>0.061745953</td>
+									  </tr>
+									  <tr>
+										<td>Adapter_80000</td>
+										<td>0.021210136</td>
+										<td>0.06158965</td>
+									  </tr>
+									  <tr>
+										<td>Adapter_12000</td>
+										<td>0.025388759</td>
+										<td>0.0610452</td>
+									  </tr>
+									</tbody>
+								  </table>
+								<p>Due to the extremely short time required to update the parameters of the discriminator, we provide the result that the discriminator does not use adapter.</p>
 
 								<h2>Finetune with LoRA</h2>
 								<table>
