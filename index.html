@@ -43,19 +43,23 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Introduction</h2>
+											<center>
+												<h2>Introduction</h2>
+											</center>
 										</header>
 										<p>Due to the remarkable progress of deep generative models, animating images has become increasingly efficient, whereas associated results have become increasingly realistic. Current animation-approaches commonly exploit structure representation extracted from driving videos. Such structure representation is instrumental in transferring motion from driving videos to still images. However, such approaches fail in case that a source image and driving video encompass large appearance variation. Moreover, the extraction of structure information requires additional modules that endow the animation-model with increased complexity.
 										</p><p>	Unlike this type of model, Latent Image Animator is a self-supervised autoencoder consisting of two networks, Encoder E and Generator G. In latent space, a set of orthogonal motion directions is learned by applying Linear Motion Decomposition (LMD) and their linear combination is used to represent any displacements in latent space. During training, LIA takes two frames sampled from the same video sequence as source and driving image respectively. During testing, LIA is able to transfer motion from unseen videos to unseen images.
 										</p>
 									</div>
 								</div>
-								<img src="images/overview_train.png" width="490">
-								<img src="images/overview_test.gif" width="490">
-								<h3>Our Generated videos</h3>
-								<video width="800" height="450" controls>
-									<source src="images/gen_res.mp4" type="video/mp4">
-								  </video>
+								<center>
+									<img src="images/overview_train.png" width="490">
+									<img src="images/overview_test.gif" width="490">
+									<h3>Our Generated videos</h3>
+									<video width="800" height="450" controls>
+										<source src="images/gen_res.mp4" type="video/mp4">
+									  </video>
+								</center>
 							</section>
 
 						<!-- First Section -->
