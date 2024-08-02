@@ -29,7 +29,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<!-- <li><a href="#intro" class="active">Introduction</a></li> -->
+							<li><a href="#intro" class="active">Introduction</a></li>
 							<li><a href="#first">Dataset</a></li>
 							<li><a href="#second">Experiments</a></li>
 							<li><a href="#cta">Results</a></li>
@@ -39,24 +39,24 @@
 				<!-- Main -->
 					<div id="main">
 						<!-- Introduction -->
-							<!-- <section id="intro" class="main">
+							<section id="intro" class="main">
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
 											<h2>Introduction</h2>
 										</header>
-										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.  
-										build neng tong bu m?
+										<p>Due to the remarkable progress of deep generative models, animating images has become increasingly efficient, whereas associated results have become increasingly realistic. Current animation-approaches commonly exploit structure representation extracted from driving videos. Such structure representation is instrumental in transferring motion from driving videos to still images. However, such approaches fail in case that a source image and driving video encompass large appearance variation. Moreover, the extraction of structure information requires additional modules that endow the animation-model with increased complexity.
+										</p><p>	Unlike this type of model, Latent Image Animator is a self-supervised autoencoder consisting of two networks, Encoder E and Generator G. In latent space, a set of orthogonal motion directions is learned by applying Linear Motion Decomposition (LMD) and their linear combination is used to represent any displacements in latent space. During training, LIA takes two frames sampled from the same video sequence as source and driving image respectively. During testing, LIA is able to transfer motion from unseen videos to unseen images.
 										</p>
-										<ul class="actions">
-											<li><a href="generic.html" class="button">Learn More</a></li>
-										</ul>
 									</div>
-									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
 								</div>
-							</section> -->
+								<img src="images/overview_train.png" width="490">
+								<img src="images/overview_test.gif" width="490">
+								<h3>Our Generated videos on Fashion dataset</h3>
+								<video width="800" height="450" controls>
+									<source src="images/gen_res.mp4" type="video/mp4">
+								  </video>
+							</section>
 
 						<!-- First Section -->
 							<section id="first" class="main special">
