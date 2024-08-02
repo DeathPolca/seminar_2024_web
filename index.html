@@ -90,6 +90,7 @@
 									<h2>Experiments</h2>
 									<p>Due to the lengthy pretraining , we finetuned the open-source model and achieved good results. <br>Based on this, we conducted the following attempts at the finetuning process.<br />
 									</p>
+
 								</header>
 
 								<h2>Finetune with different loss</h2>
@@ -121,7 +122,34 @@
 							<section id="cta" class="main special">
 								<header class="major">
 									<h2>Results</h2>
-									<p>Here are the results of the above attempts.</p>
+									<p>Here are the results of default finetune and the above attempts.</p>
+									<h2>Default finetune</h2>
+									<table>
+										<thead>
+										  <tr>
+											<th>Model</th>
+											<th>Recon loss</th>
+											<th>Lpips loss</th>
+										  </tr>
+										</thead>
+										<tbody>
+										  <tr>
+											<td>taichi_40000</td>
+											<td>0.019903872</td>
+											<td>0.063486874</td>
+										  </tr>
+										  <tr>
+											<td>taichi_80000</td>
+											<td>0.0192854</td>
+											<td>0.05776272</td>
+										  </tr>
+										  <tr>
+											<td>taichi_120000</td>
+											<td>0.019144293</td>
+											<td>0.05586053</td>
+										  </tr>
+										</tbody>
+									  </table>
 								</header>
 								<h2>Finetune with different loss</h2>
 								<table>
