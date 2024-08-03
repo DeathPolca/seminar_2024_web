@@ -5,307 +5,403 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>2024 seminar</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->·
-			<div id="wrapper">
+<head>
+	<title>2024 seminar</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<script type="text/javascript"
+		src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
+</head>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<!-- <span class="logo"><img src="images/logo.svg" alt="" /></span> -->
-						<h1>2024 seminar LIA</h1>
-						<p>Experiments on Latent Image Animator<br />
-						built by Zuo Zhirui, Xiang Hui and Xiong Ziwen for 2024 Seminar</a>.</p>
-					</header>
+<body class="is-preload">
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="#intro" class="active">Introduction</a></li>
-							<li><a href="#first">Dataset</a></li>
-							<li><a href="#second">Experiments</a></li>
-							<li><a href="#cta">Results</a></li>
-						</ul>
-					</nav>
+	<!-- Wrapper -->·
+	<div id="wrapper">
 
-				<!-- Main -->
-					<div id="main">
-						<!-- Introduction -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<center>
-												<h2>Introduction</h2>
-											</center>
-										</header>
-										<p>Due to the remarkable progress of deep generative models, animating images has become increasingly efficient, whereas associated results have become increasingly realistic. Current animation-approaches commonly exploit structure representation extracted from driving videos. Such structure representation is instrumental in transferring motion from driving videos to still images. However, such approaches fail in case that a source image and driving video encompass large appearance variation. Moreover, the extraction of structure information requires additional modules that endow the animation-model with increased complexity.
-										</p><p>	Unlike this type of model, Latent Image Animator is a self-supervised autoencoder consisting of two networks, Encoder E and Generator G. In latent space, a set of orthogonal motion directions is learned by applying Linear Motion Decomposition (LMD) and their linear combination is used to represent any displacements in latent space. During training, LIA takes two frames sampled from the same video sequence as source and driving image respectively. During testing, LIA is able to transfer motion from unseen videos to unseen images.
-										</p>
-									</div>
-								</div>
-								<center>
-									<img src="images/overview_train.png" width="490">
-									<img src="images/overview_test.gif" width="490">
-									<h3>Our Generated videos</h3>
-									<video width="800" height="450" controls>
-										<source src="images/gen_res.mp4" type="video/mp4">
-									  </video>
-								</center>
-							</section>
+		<!-- Header -->
+		<header id="header" class="alt">
+			<!-- <span class="logo"><img src="images/logo.svg" alt="" /></span> -->
+			<h1>2024 seminar LIA</h1>
+			<p>Experiments on Latent Image Animator<br />
+				built by Zuo Zhirui, Xiang Hui and Xiong Ziwen for 2024 Seminar</a>.</p>
+		</header>
 
-						<!-- First Section -->
-							<section id="first" class="main special">
-								<header class="major">
-									<h2>Dataset</h2>
-								</header>
-								<ul class="features">
-									<li>
-										<!-- <span class="icon solid major style1 fa-code"></span> -->
-										<h3>Pretrained models</h3>
-										<p>We used the open-source model taichi.pt provided by Latent Image Animator as the pretrained model.</p>
-									</li>
-									<li>
-										<!-- <span class="icon major style3 fa-copy"></span> -->
-										<h3>Dataset</h3>
-										<p>We used the UBC Fashion dataset proposed in DwNet for finetuning, which includes 500 training videos and 100 testing videos.</p>
-									</li>
-								</ul>
-								<video width="320" height="240" controls>
-									<source src="images/video.mp4" type="video/mp4">
-								  </video>
-								<footer class="major">
-									<!-- <ul class="actions special">
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li><a href="#intro" class="active">Introduction</a></li>
+				<li><a href="#first">Dataset</a></li>
+				<li><a href="#second">Experiments</a></li>
+				<li><a href="#cta">Results</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main -->
+		<div id="main">
+			<!-- Introduction -->
+			<section id="intro" class="main">
+				<div class="spotlight">
+					<div class="content">
+						<header class="major">
+							<center>
+								<h2>Introduction</h2>
+							</center>
+						</header>
+						<p>Due to the remarkable progress of deep generative models, animating images has become
+							increasingly efficient, whereas associated results have become increasingly realistic.
+							Current animation-approaches commonly exploit structure representation extracted from
+							driving videos. Such structure representation is instrumental in transferring motion from
+							driving videos to still images. However, such approaches fail in case that a source image
+							and driving video encompass large appearance variation. Moreover, the extraction of
+							structure information requires additional modules that endow the animation-model with
+							increased complexity.
+						</p>
+						<p> Unlike this type of model, Latent Image Animator is a self-supervised autoencoder consisting
+							of two networks, Encoder E and Generator G. In latent space, a set of orthogonal motion
+							directions is learned by applying Linear Motion Decomposition (LMD) and their linear
+							combination is used to represent any displacements in latent space. During training, LIA
+							takes two frames sampled from the same video sequence as source and driving image
+							respectively. During testing, LIA is able to transfer motion from unseen videos to unseen
+							images.
+						</p>
+					</div>
+				</div>
+				<center>
+					<img src="images/overview_train.png" width="490">
+					<img src="images/overview_test.gif" width="490">
+					<h3>Our Generated videos</h3>
+					<video width="800" height="450" controls>
+						<source src="images/gen_res.mp4" type="video/mp4">
+					</video>
+				</center>
+			</section>
+
+			<!-- First Section -->
+			<section id="first" class="main special">
+				<header class="major">
+					<h2>Dataset</h2>
+				</header>
+				<ul class="features">
+					<li>
+						<!-- <span class="icon solid major style1 fa-code"></span> -->
+						<h3>Pretrained models</h3>
+						<p>We used the open-source model taichi.pt provided by Latent Image Animator as the pretrained
+							model.</p>
+					</li>
+					<li>
+						<!-- <span class="icon major style3 fa-copy"></span> -->
+						<h3>Dataset</h3>
+						<p>We used the UBC Fashion dataset proposed in DwNet for finetuning, which includes 500 training
+							videos and 100 testing videos.</p>
+					</li>
+				</ul>
+				<video width="320" height="240" controls>
+					<source src="images/video.mp4" type="video/mp4">
+				</video>
+				<footer class="major">
+					<!-- <ul class="actions special">
 										<li><a href="generic.html" class="button">Learn More</a></li>
 									</ul> -->
-								</footer>
-							</section>
-						<!-- Second Section -->
-							<section id="second" class="main special">
-								<header class="major">
-									<h2>Experiments</h2>
-									<p>Due to the lengthy pretraining , we finetuned the open-source model and achieved good results. <br>Based on this, we conducted the following attempts at the finetuning process.<br />
-									</p>
+				</footer>
+			</section>
+			<!-- Second Section -->
+			<section id="second" class="main special">
+				<header class="major">
+					<h2>Experiments</h2>
+					<p>Due to the lengthy pretraining , we finetuned the open-source model and achieved good results.
+						<br>Based on this, we conducted the following attempts at the finetuning process.<br />
+					</p>
 
-								</header>
+				</header>
 
-								<h2>Finetune with different loss</h2>
+				<h2>Finetune with different loss</h2>
 
-								<p>In the original work, the reconstruction loss used  L1 loss. In the fine-tuning experiments, we utilized pre-trained taichi model and added the SSIM loss to the reconstruction loss, specifically, we designed two reconstruction loss functions. <br>The two reconstruction loss functions are shown below.</p>
-								<P>`L_{rec}=L_1+L_{SSIM}`</br>`L_{rec}=0.7*L_1+0.3*L_{SSIM}`</P>
+				<p>In the original work, the reconstruction loss used L1 loss. In the fine-tuning experiments, we
+					utilized pre-trained taichi model and added the SSIM loss to the reconstruction loss, specifically,
+					we designed two reconstruction loss functions. <br>The two reconstruction loss functions are shown
+					below.</p>
+				<P>`L_{rec}=L_1+L_{SSIM}`</br>`L_{rec}=0.7*L_1+0.3*L_{SSIM}`</P>
 
-								<h2>Finetune with features loss</h2>
+				<h2>Finetune with features loss</h2>
 
-								<div>We want the decoder to be able to decouple the image features from the motion information, so we add similarity constraints to the features, specifically, we add l1 loss to the feature layer.</div>
-								<img src="images/feature_loss.jpg" alt="feature loss" width="1000" height="400">
+				<div>We want the decoder to be able to decouple the image features from the motion information, so we
+					add similarity constraints to the features, specifically, we add l1 loss to the feature layer.</div>
+				<img src="images/feature_loss.jpg" alt="feature loss" width="1000" height="400">
 
-								<h2>Finetune with adapter</h2>
+				<h2>Finetune with adapter</h2>
 
-								<p>In the fine-tuning task, the optimization of a specific task can be carried out by introducing an adapter module. The adapter module is a lightweight set of parameters that are added to the middle layer of the model to protect the parameters of the original pre-trained model. The goal of this approach is to adapt the parameters of the adapter module to the new task without changing the overall model structure.In the experiment, we introduced the adapter into the model by way of residuals.</p>
-								<img src="images/adapter.png" width="600" height="300">
+				<p>In the fine-tuning task, the optimization of a specific task can be carried out by introducing an
+					adapter module. The adapter module is a lightweight set of parameters that are added to the middle
+					layer of the model to protect the parameters of the original pre-trained model. The goal of this
+					approach is to adapt the parameters of the adapter module to the new task without changing the
+					overall model structure.In the experiment, we introduced the adapter into the model by way of
+					residuals.</p>
+				<img src="images/adapter.png" width="600" height="300">
 
-								<h2>Finetune with LoRA</h2>
+				<h2>Finetune with LoRA</h2>
 
-								<p>Low Rank Adaptation (LoRA) is used to address the challenges faced in finetuning large language models. For large models with billions of parameters, finetuning for specific domains is costly. LoRA retains the weights of pretrained models and adds trainable layers within each model block. This leads to a significant reduction in the number of parameters that need to be finetuned. Generally speaking, LoRA is used in transformer architectures. However, LIA is composed of convolutional neural networks, so we use ConvLoRA from the article <i> CnvLoRA and AdaBN Based Domain Adaptation via Self Training </i> for finetuning.</p>
-								<img src="images/convlora.png" width="600" height="300">
-								<!-- <footer class="major">
+				<p>Low Rank Adaptation (LoRA) is used to address the challenges faced in finetuning large language
+					models. For large models with billions of parameters, finetuning for specific domains is costly.
+					LoRA retains the weights of pretrained models and adds trainable layers within each model block.
+					This leads to a significant reduction in the number of parameters that need to be finetuned.
+					Generally speaking, LoRA is used in transformer architectures. However, LIA is composed of
+					convolutional neural networks, so we use ConvLoRA from the article <i> CnvLoRA and AdaBN Based
+						Domain Adaptation via Self Training </i> for finetuning.</p>
+				<img src="images/convlora.png" width="600" height="300">
+				<!-- <footer class="major">
 									<ul class="actions special">
 										<li><a href="generic.html" class="button">Learn More</a></li>
 									</ul>
 								</footer> -->
-							</section>
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
-									<h2>Results</h2>
-									<p>Here are the results of default finetune and the above attempts.</p>
-								</header>
-								<h2>Default finetune</h2>
-								<table>
-									<thead>
-									  <tr>
-										<th>Model</th>
-										<th>Recon loss</th>
-										<th>Lpips loss</th>
-									  </tr>
-									</thead>
-									<tbody>
-									  <tr>
-										<td>taichi_40000</td>
-										<td>0.019903872</td>
-										<td>0.063486874</td>
-									  </tr>
-									  <tr>
-										<td>taichi_80000</td>
-										<td>0.0192854</td>
-										<td>0.05776272</td>
-									  </tr>
-									  <tr>
-										<td>taichi_120000</td>
-										<td>0.019144293</td>
-										<td>0.05586053</td>
-									  </tr>
-									</tbody>
-								  </table>
-								<h2>Finetune with different loss</h2>
-								<table>
-									<thead>
-									  <tr>
-										<th>Model</th>
-										<th>Recon loss</th>
-										<th>Lpips loss</th>
-									  </tr>
-									</thead>
-									<tbody>
-									  <tr>
-										<td>taichi_40000</td>
-										<td>0.017870907</td>
-										<td>0.047854178</td>
-									  </tr>
-									  <tr>
-										<td>taichi_80000</td>
-										<td>0.017218325</td>
-										<td>0.04689284</td>
-									  </tr>
-									  <tr>
-										<td>taichi_120000</td>
-										<td>0.017635012</td>
-										<td>0.04753318</td>
-									  </tr>
-									</tbody>
-								  </table>					
-								  <h2>Finetune with feature loss</h2>
-								  <table>
-									  <thead>
-										<tr>
-										  <th>Model</th>
-										  <th>Recon loss</th>
-										  <th>Lpips loss</th>
-										</tr>
-									  </thead>
-									  <tbody>
-										<tr>
-										  <td>taichi_40000</td>
-										  <td>0.017870907</td>
-										  <td>0.047854178</td>
-										</tr>
-										<tr>
-										  <td>taichi_80000</td>
-										  <td>0.017395224</td>
-										  <td>0.047284912</td>
-										</tr>
-										<tr>
-										  <td>taichi_120000</td>
-										  <td>0.017116006</td>
-										  <td>0.047801152</td>
-										</tr>
-									  </tbody>
-									</table>
-									<div style="text-align: center;">visualization of feature layers</div>
-									<div class="center-text">
-									<img src="images/view.jpg", alt="view", width="1000", height="400">
-									</div>
-								<h2>Finetune with adapter</h2>
-								<table>
-									<thead>
-									  <tr>
-										<th>Model</th>
-										<th>Recon loss</th>
-										<th>Lpips loss</th>
-									  </tr>
-									</thead>
-									<tbody>
-									  <tr>
-										<td>Adapter_40000</td>
-										<td>0.021015551</td>
-										<td>0.061745953</td>
-									  </tr>
-									  <tr>
-										<td>Adapter_80000</td>
-										<td>0.021210136</td>
-										<td>0.06158965</td>
-									  </tr>
-									  <tr>
-										<td>Adapter_120000</td>
-										<td>0.025388759</td>
-										<td>0.0610452</td>
-									  </tr>
-									</tbody>
-								  </table>
-								<p>Due to the extremely short time required to update the parameters of the discriminator, we provide the result that the discriminator does not use adapter.</p>
+			</section>
+			<!-- Get Started -->
+			<section id="cta" class="main special">
+				<header class="major">
+					<h2>Results</h2>
+					<p>Here are the results of default finetune and the above attempts.</p>
+				</header>
+				<h2>Default finetune</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Model</th>
+							<th>Recon loss</th>
+							<th>Lpips loss</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>taichi_40000</td>
+							<td>0.01990</td>
+							<td>0.06349</td>
+						</tr>
+						<tr>
+							<td>taichi_80000</td>
+							<td>0.01929</td>
+							<td>0.05776</td>
+						</tr>
+						<tr>
+							<td>taichi_120000</td>
+							<td>0.01914</td>
+							<td>0.05586</td>
+						</tr>
+					</tbody>
+				</table>
+				<h2>Finetune with different loss</h2>
+				<P>`L_{rec}=L_1+L_{SSIM}`</P>
+				<table>
+					<thead>
+						<tr>
+							<th>Model</th>
+							<th>Recon loss</th>
+							<th>Lpips loss</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>taichi_40000</td>
+							<td>0.01985</td>
+							<td>0.05244</td>
+						</tr>
+						<tr>
+							<td>taichi_80000</td>
+							<td>0.01739</td>
+							<td>0.04728</td>
+						</tr>
+						<tr>
+							<td>taichi_120000</td>
+							<td>0.01712</td>
+							<td>0.04780</td>
+						</tr>
+					</tbody>
+				</table>
+				<h2>Finetune with different loss</h2>
+				<P>`L_{rec}=0.7*L_1+0.3*L_{SSIM}`</P>
+				<table>
+					<thead>
+						<tr>
+							<th>Model</th>
+							<th>Recon loss</th>
+							<th>Lpips loss</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>taichi_40000</td>
+							<td>0.01787</td>
+							<td>0.04785</td>
+						</tr>
+						<tr>
+							<td>taichi_80000</td>
+							<td>0.01722</td>
+							<td>0.04689</td>
+						</tr>
+						<tr>
+							<td>taichi_120000</td>
+							<td>0.01764</td>
+							<td>0.04753</td>
+						</tr>
+					</tbody>
+				</table>
+				<h2>Finetune with feature loss(add to all feature layers)</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Model</th>
+							<th>Recon loss</th>
+							<th>Lpips loss</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>taichi_40000</td>
+							<td>0.01787</td>
+							<td>0.04785</td>
+						</tr>
+						<tr>
+							<td>taichi_80000</td>
+							<td>0.01739</td>
+							<td>0.04728</td>
+						</tr>
+						<tr>
+							<td>taichi_120000</td>
+							<td>0.01712</td>
+							<td>0.04780</td>
+						</tr>
+					</tbody>
+				</table>
+				<h2>Finetune with feature loss(add to the deepest three feature layers)</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Model</th>
+							<th>Recon loss</th>
+							<th>Lpips loss</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>taichi_40000</td>
+							<td>0.02278</td>
+							<td>0.05261</td>
+						</tr>
+						<tr>
+							<td>taichi_80000</td>
+							<td>0.01819</td>
+							<td>0.04708</td>
+						</tr>
+						<tr>
+							<td>taichi_120000</td>
+							<td>0.01721</td>
+							<td>0.04651</td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="text-align: center;">visualization of feature layers</div>
+				<div class="center-text">
+					<img src="images/view.jpg" , alt="view" , width="1000" , height="400">
+				</div>
+				<h2>Finetune with adapter</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Model</th>
+							<th>Recon loss</th>
+							<th>Lpips loss</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Adapter_40000</td>
+							<td>0.02102</td>
+							<td>0.06175</td>
+						</tr>
+						<tr>
+							<td>Adapter_80000</td>
+							<td>0.02121</td>
+							<td>0.06159</td>
+						</tr>
+						<tr>
+							<td>Adapter_120000</td>
+							<td>0.02539</td>
+							<td>0.06105</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>Due to the extremely short time required to update the parameters of the discriminator, we provide
+					the result that the discriminator does not use adapter.</p>
 
-								<h2>Finetune with LoRA</h2>
-								<table>
-									<thead>
-									  <tr>
-										<th>Model</th>
-										<th>Recon loss</th>
-										<th>Lpips loss</th>
-									  </tr>
-									</thead>
-									<tbody>
-									  <tr>
-										<td>Lora_40000</td>
-										<td>0.019903766</td>
-										<td>0.058042873</td>
-									  </tr>
-									  <tr>
-										<td>Lora_80000</td>
-										<td>0.019482996</td>
-										<td>0.05589702</td>
-									  </tr>
-									  <tr>
-										<td>Lora_120000</td>
-										<td>0.01968369</td>
-										<td>0.05461842</td>
-									  </tr>
-									  <tr>
-										<td>Lora_w/o_Dis_40000</td>
-										<td>0.020124692</td>
-										<td>0.0595114</td>
-									  </tr>
-									  <tr>
-										<td>Lora_w/o_Dis_80000</td>
-										<td>0.019737989</td>
-										<td>0.05686592</td>
-									  </tr>
-									  <tr>
-										<td>Lora_w/o_Dis_120000</td>
-										<td>0.019538457</td>
-										<td> 0.05562961</td>
-									  </tr>
-									</tbody>
-								  </table>
+				<h2>Finetune with LoRA</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Model</th>
+							<th>Recon loss</th>
+							<th>Lpips loss</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lora_40000</td>
+							<td>0.01991</td>
+							<td>0.05804</td>
+						</tr>
+						<tr>
+							<td>Lora_80000</td>
+							<td>0.01948</td>
+							<td>0.05589</td>
+						</tr>
+						<tr>
+							<td>Lora_120000</td>
+							<td>0.01968</td>
+							<td>0.05462</td>
+						</tr>
+						<tr>
+							<td>Lora_w/o_Dis_40000</td>
+							<td>0.02012</td>
+							<td>0.05951</td>
+						</tr>
+						<tr>
+							<td>Lora_w/o_Dis_80000</td>
+							<td>0.01974</td>
+							<td>0.05687</td>
+						</tr>
+						<tr>
+							<td>Lora_w/o_Dis_120000</td>
+							<td>0.01954</td>
+							<td>0.05563</td>
+						</tr>
+					</tbody>
+				</table>
 
-								<p>Due to the extremely short time required to update the parameters of the discriminator, we provide the result that the discriminator does not use ConvLoRA.</p>
-								<!-- <footer class="major">
+				<p>Due to the extremely short time required to update the parameters of the discriminator, we provide
+					the result that the discriminator does not use ConvLoRA.</p>
+				<!-- <footer class="major">
 									<ul class="actions special">
 										<li><a href="generic.html" class="button primary">Get Started</a></li>
 										<li><a href="generic.html" class="button">Learn More</a></li>
 									</ul>
 								</footer> -->
-							</section>
+			</section>
 
-					</div>
+		</div>
 
-			</div>
+	</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
 
-	</body>
+</body>
+
 </html>
